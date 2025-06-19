@@ -18,7 +18,12 @@ const Header = () => {
       <nav className="navbar bg-body-tertiary ">
       <div className="container ">
         <Link className="navbar-brand" to={'/'} >Stock</Link>
-        <div> {isLoggedIn ? (<button className='btn btn-danger' onClick={handleLogout}>Logout</button>) : (
+        <div> {isLoggedIn ? (
+          <>
+            <Button text="Dashboard" class="btn btn-info"  url='/dashboard'/> &nbsp; 
+            <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+          </>
+        ) : (
             <>
             <Button text="Login" class="btn-outline-primary"  url='/login'/>
               &nbsp; 
